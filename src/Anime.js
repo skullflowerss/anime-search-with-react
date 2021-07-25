@@ -2,28 +2,33 @@ import React, {useState} from 'react'
 
 
 const Anime = ({anime}) =>{
+    
     let title = anime['title']
     let img = anime['image_url']
     let description = anime['synopsis']
     let score = anime['score']
     let airing = anime['start_date']
+
+    const [readMore, setReadMore] = useState(false)
+
+
     return ( 
-        <div className="anime-card">
-            <div className="anime-title-img">
-                <h1 className="title">{title}</h1>
-                <img src={img} alt={title} />
+        <div className="card">
+            <div className="wrapper" style={{ 
+                backgroundImage: `url(${img})`,
+                backgroundSize: 'auto',
+                backgroundRepeat: 'no-repeat',
+            }}
+             >
+                <div className="data">
+                    <div className="content">
+                        <h1 className="title">{title}</h1>
+                        <p className="text">{ readMore ? description : `${description.substring(0,50)}...` }</p>
+                    </div>
+                </div>
             </div>
-            <div className="anime-info">
-                <h3>Description:</h3>
-                <p className="anime-description">
-                    {description}
-                </p>
-                <h4>Score:</h4>
-                <p className="anime-score">
-                    {score}
-                </p>
-            </div>
-        </div>
+      </div>
+
     )
 }
 

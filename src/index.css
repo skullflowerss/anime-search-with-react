@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,700&family=Zen+Tokyo+Zoo&display=swap');
 
 :root {
+  font-size: 16px;
   box-sizing: border-box;
 }
 
@@ -24,49 +25,66 @@ body{
 }
 
 .animes-holder{
-  box-sizing: border-box;
-  margin: auto;
-  width: 80%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-bottom: 100px;
+}
+
+h2{
+  text-align: center;
 }
 
 .animes-section{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.anime-card{
-  box-sizing: border-box;
-  width: 40%;
-  margin: 0.5rem 2rem;
-  background-color:white;
-  border-radius: .5rem;
-  overflow: hidden;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.anime-title-img{
-  width: 90%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.anime-title-img img{
-  float: left;
-  width:  350px;
-  height: 350px;
-  object-fit: cover;
-}
-
-.anime-info{
+  display: flex; 
+  padding: 1rem;
   width: 80%;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.card{
+  float: left;
+  padding: 0 1.7rem;
+  width: 18%;
+  margin: 1em;
+}
+
+.wrapper{
+    background-color: white;
+    min-height: 430px;
+    position: relative;
+    border-radius: 0.2em;
+    overflow: hidden;
+}
+
+.content{
+  padding-top: 2px;
+  background-color: white;
+ 
+}
+
+.data{
+  position: absolute;
+  width: 100%;
+  transform: translateY(calc(250px + 1em));
+  padding-top: 10px;
+}
+
+.card .data .content {
+    position: relative;
+    z-index: 1;
+}
+
+
+.title{
+  width: 100%;
+  font-size: 16px;
+  margin: 0;
+  padding: 15px 10px 0 15px;
+}
+
+.text{
+  font-size: 12px;
+  padding: 1em;
 }
