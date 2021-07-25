@@ -1,13 +1,72 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+@import url('https://fonts.googleapis.com/css2?family=Arvo:ital,wght@0,400;0,700;1,700&family=Zen+Tokyo+Zoo&display=swap');
+
+:root {
+  box-sizing: border-box;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+*,
+::before,
+::after {
+    box-sizing: inherit;
+}
+
+body{
+  background-color: #709b90;
+  font-family: 'Arvo', serif;
+  margin: 0;
+  padding: 0;
+}
+
+.app{
+  width: 100%;
+  height: 100vh;
+  display: flex;
+}
+
+.animes-holder{
+  box-sizing: border-box;
+  margin: auto;
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 100px;
+}
+
+.animes-section{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.anime-card{
+  box-sizing: border-box;
+  width: 40%;
+  margin: 0.5rem 2rem;
+  background-color:white;
+  border-radius: .5rem;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.anime-title-img{
+  width: 90%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.anime-title-img img{
+  float: left;
+  width:  350px;
+  height: 350px;
+  object-fit: cover;
+}
+
+.anime-info{
+  width: 80%;
 }
